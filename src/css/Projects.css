@@ -1,0 +1,63 @@
+.projectSection{
+    display: flex;
+    position: fixed;
+    margin: 0 auto;
+    right: 1%;
+    top: 50%;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.projectCircle {
+    border-radius: 50%;
+    background-color: rgb(251, 250, 248);
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    width: 300px;
+    border: 1px solid rgb(33, 93, 161);
+    box-shadow: 0px 0px 10px inset rgb(33, 93, 161);
+}
+
+.resumeSection{
+    display: flex;
+    position: fixed;
+    margin: 0 auto;
+    right: 25%;
+    top: 25%;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.resumeCircle {
+    border-radius: 50%;
+    background-color: rgb(251, 250, 248);
+    padding: 0;
+    margin: 0;
+    height: 250px;
+    width: 250px;
+    border: 1px solid rgb(33, 161, 121);
+    box-shadow: 0px 0px 10px inset rgb(33, 161, 121);
+}
+
+.artworkSection{
+    display: flex;
+    position: fixed;
+    margin: 0 auto;
+    right: 45%;
+    top: 60%;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.artworkCircle {
+    border-radius: 50%;
+    background-color: rgb(251, 250, 248);
+    padding: 0;
+    margin: 0;
+    height: 200px;
+    width: 200px;
+    border: 1px solid rgb(161, 112, 33);
+    box-shadow: 0px 0px 10px inset rgb(161, 110, 33);
+}
+
