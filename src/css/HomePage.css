@@ -77,6 +77,23 @@ nav {
     }
 }
 
+/* LottieFiles WaveSVG Animation */
+.lottie {
+    animation: loadSVG 1s ease-in;  
+}
+
+@keyframes loadSVG {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .introText {
     height: fit-content;
     cursor: default;
@@ -101,7 +118,6 @@ nav {
     }
 }
 
-
 .contactBtns {
     display: flex;
     justify-content: center;
@@ -120,15 +136,56 @@ nav {
     height: 40px;
 }
 
+/* About Me Section */
+.aboutMe {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutIntro {
+    text-align: center;
+    width: 50%;
+    margin: 50px;
+}
+
 .techStack {
     text-align: center;
-    width: 100%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
 
-.stackLogos {
+.techStack h2 {
+    margin: 20px auto;
+}
+
+/*Infinite Scroll Marquee*/
+.scrollStack {
+    --gap: 1rem;
     display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
+    overflow: hidden;
+    user-select: none;
+    margin: 40px auto;
+    gap: var(--gap);  
+}
+
+.stackLogos {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scrollLogos linear 30s infinite;
+}
+
+@keyframes scrollLogos {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.projectSection {
+    text-align: center;
 }
