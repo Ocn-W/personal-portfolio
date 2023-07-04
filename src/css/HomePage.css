@@ -19,7 +19,6 @@ nav {
         transform: translateY(-100%);
         opacity: 0;
     }
-
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -155,6 +154,7 @@ nav {
 }
 
 .techStack h2 {
+    font-weight: 250;
     margin: 20px auto;
 }
 
@@ -188,4 +188,9 @@ nav {
 
 .projectSection {
     text-align: center;
+}
+
+.projectSection h2 {
+    font-size: 36px;
+    font-weight: 250;
 }

@@ -14,7 +14,8 @@ export default function HomePage() {
 
   return (
     <div className="homePage">
-      <Parallax pages={5} ref={ref}>
+      <Parallax pages={4} ref={ref}>
+{/* Navigation Section */}
         <ParallaxLayer sticky={{start: 0, end: 2}} style={{height:'fit-content'}}>
           <nav>
             <h1
@@ -43,15 +44,15 @@ export default function HomePage() {
             </ul>
           </nav>
         </ParallaxLayer>
-
+{/* Introduction Section */}
         <ParallaxLayer speed={1}>
           <section className="introSection">
             <div style={{ display: "flex" }}>
               <div className="introText">
-                <h1>My name is Ocean Waring</h1>
+                <h1>MY NAME IS OCEAN WARING</h1>
                 <p>FRONTEND REACT DEVELOPER</p>
                 <p>
-                  Based in NYC{"  "}
+                  Based in NYC{" "}
                   <FontAwesomeIcon
                     icon={faLocationDot}
                     style={{ color: "red" }}
@@ -73,12 +74,12 @@ export default function HomePage() {
             </div>
           </section>
         </ParallaxLayer>
-
-        <ParallaxLayer speed={2} offset={0.7} factor={0.5}>
+{/* SVG Transition Section */}
+        <ParallaxLayer speed={2} offset={0.75}>
           <Lottie className="lottie" animationData={waveSVG} />
         </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.1}>
+{/* About Me Section */}
+        <ParallaxLayer offset={0.95} speed={0.2}>
           <section className="aboutMe">
             <div className="aboutIntro">
               <h2>ABOUT ME</h2>
@@ -118,15 +119,15 @@ export default function HomePage() {
             </div>
           </section>
         </ParallaxLayer>
-
-        <ParallaxLayer offset={2} style={{display:'flex', flexDirection:'column'}}>
+{/* Projects Section */}
+        <ParallaxLayer offset={1.9} style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(33, 161, 121)', height:'fit-content', color:'white'}}>
           <section className="projectSection">
             <h2>PROJECTS</h2>
             <Projects />
           </section>
         </ParallaxLayer>
-
-        <ParallaxLayer offset={4} speed={1}>
+{/* Hobbies Section */}
+        <ParallaxLayer offset={3.65} speed={1}>
           <section className="hobbySection">
             <div className="aboutHobbies">
               <h3>MY HOBBIES</h3>
@@ -135,7 +136,7 @@ export default function HomePage() {
                   painting, museums, galleries, anything art related I'm all for
                   it!
                 </p>
-                <Lottie animationData={artSVG} />
+                <Lottie animationData={artSVG} style={{height:'100px'}}/>
               </div>
               <div>
                 <p>
