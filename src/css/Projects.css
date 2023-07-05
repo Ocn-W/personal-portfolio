@@ -1,46 +1,72 @@
-.project {
-    min-height: 30%;
-    max-height: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.projectWheelContainer {
+    overflow: hidden;
     width: 100%;
-    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 1);
 }
 
-.projectImg1,
-.projectImg2,
-.projectImg3 {
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    width: 50%;
-    margin: 10px;
+.projectWheel {
+    white-space: nowrap;
+    transition: transform 0.3s;
+    
 }
 
-.projectImg1 {
-    background-image: url(../assets/RetailSiteHome.jpg);
-}
-.projectImg2 {
-    background-image: url(../assets/soundStackDemo.jpg);
-}
-.projectImg3 {
-    background-image: url(../assets/theDesktop02.png);
+.project {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 490px;
 }
 
 .projectText {
-    height: max-content;
-    width: 50%;
+    font-size: 1.15rem;
+    margin: 40px 0 40px 0;
+    padding: 0 20px 0 20px;
+    color: #617d98;
 }
 
-.projectText p {
-    font-size: 24px;
-    font-weight: 350;
+.projectImg img {
+    height: 300px;
 }
 
-.projectIcons {
+.wheel-btns {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    height: 50px;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+.btn-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.indicator-btns {
+    border: none;
+    cursor: pointer;
+}
+
+.indicators>button {
+    margin: 5px;
+    background: none;
+}
+
+.indicator-symbol {
+    color: gainsboro;
+}
+
+.indicator-symbol-active {
+    color: grey;
 }

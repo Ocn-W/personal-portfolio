@@ -1,54 +1,115 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faHtml5, faCss3, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import '../css/Projects.css';
-import retailWebsite from '../assets/RetailSiteHome.jpg';
-import spotifyAPISite from '../assets/soundStackDemo.jpg';
-import theDesktopSite from '../assets/theDesktop02.png';
+import webGenerator from '../assets/WebsiteGenerator.png';
+import playlistMaker from '../assets/PlaylistMaker.jpg';
+import retailSite from '../assets/RetailSite.jpg';
+import { faArrowLeft, faArrowRight, faCircle } from '@fortawesome/free-solid-svg-icons';
+
+
 
 export default function Projects() {
+  const [activeIndex, setCurrentIndex] = useState(0);
+  function updateIndex(newIndex) {
+    newIndex < 0
+      ? newIndex = 0
+      : newIndex >= projects.length 
+      ? newIndex = projects.length - 1 
+      : newIndex
+    setCurrentIndex(newIndex);
+  }
+
+  const projects = [
+    {
+      name: "Retail Website",
+      techstack: "Vite React React-Context Netlify",
+      description: " ",
+      demoUrl: "https://fashionxpress.netlify.app",
+      image: retailSite,
+    },
+    {
+      name: "Spotify Playlist Maker",
+      techstack: "React React-Context SpotifyAPI Netlify",
+      description: " ",
+      demoUrl: "https://soundstack.netlify.app",
+      image: playlistMaker,
+    },
+    {
+      name: "Random Website Generator",
+      techstack: "HTML CSS Javascript",
+      description: "",
+      demoUrl: "https://thedesktop.netlify.app",
+      image: webGenerator,
+    },
+  ];
+
   return (
-    <>
-      <section className='project'>
-      <div className='projectImg1'></div>
-        <div className='projectText'>
-        <p>Mock Retail Website</p>
-        <div className='projectIcons'>
-          <FontAwesomeIcon icon={faCss3} style={{ height: "25px", color: "blue" }}/>   
-          <FontAwesomeIcon icon={faReact} style={{ height: "25px", color: "cyan" }}/>
-          <img src="src/assets/svg/Vitejs-logo.svg" style={{ height: "25px" }}/>
-        </div>
-        <p>Project Info</p>
-        <a blank="#" href='https://thedesktop.netlify.app/'>Live Demo</a>
-        </div>
-      </section>
+    <div className="projectWheelContainer">
+      <div
+        className="projectWheel"
+        style={{ transform: `translate(-${activeIndex * 100}%)` }}
+      >
+        {projects.map((project) => {
+          return (
+            <section className="project">
+              <div className="projectImg">
+                <img src={project.image} />
+              </div>
+              <div className="projectText">
+                <p>{project.name}</p>
+                <p>{project.techstack}</p>
+                <p>{project.description}</p>
+                <a href={project.demoUrl}>Live Demo</a>
+              </div>
+            </section>
+          );
+        })}
+      </div>
 
-      <section className='project'>
-        <div className='projectImg2'></div>
-        <div className='projectText'>
-        <p>Spotify Playlist Creator</p>
-        <div className='projectIcons'>
-          <FontAwesomeIcon icon={faCss3} style={{ height: "25px", color: "blue" }}/>
-          <FontAwesomeIcon icon={faReact} style={{height:"25px", color:"cyan"}}/>
+      <div className="wheel-btns">
+        <button
+          className="btn-arrow"
+          onClick={() => {
+            updateIndex(activeIndex - 1);
+          }}
+        >
+          <span>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </span>{" "}
+        </button>
+        <div className="indicators">
+          {projects.map((project, index) => {
+            return (
+              <button
+                className="indicator-btns"
+                onClick={() => {
+                  updateIndex(index);
+                }}
+              >
+                <span
+                  className={`${index === activeIndex
+                      ? "indicator-symbol-active"
+                      : "indicator-symbol"
+                    }`}
+                >
+                  <FontAwesomeIcon icon={faCircle} />
+                </span>
+              </button>
+            );
+          })}
         </div>
-        <p>Project Info</p>
-        <a blank="#" href='https://soundstack.netlify.app/'>Live Demo</a>
-        </div>
-      </section>
-
-      <section className='project'>
-      <div className='projectImg3'></div>
-        <div className='projectText'>
-        <p>Random Website Generator</p>
-        <div className='projectIcons'>
-          <FontAwesomeIcon icon={faHtml5} style={{ height: "25px", color: "orangered" }}/>
-          <FontAwesomeIcon icon={faCss3} style={{ height: "25px", color: "blue" }}/>
-          <FontAwesomeIcon icon={faJsSquare} style={{ height: "25px", color: "gold" }}/>
-        </div>
-        <p>Project Info</p>
-        <a blank="#" href='https://fashionxpress.netlify.app/'>Live Demo</a>
-        </div>
-      </section>
-    </>
-  )
+        <button
+          className="btn-arrow"
+          onClick={() => {
+            updateIndex(activeIndex + 1);
+          }}
+        >
+          <span>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </span>
+        </button>
+      </div>
+    </div>
+  );
 }

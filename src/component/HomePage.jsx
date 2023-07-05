@@ -120,7 +120,12 @@ export default function HomePage() {
           </section>
         </ParallaxLayer>
 {/* Projects Section */}
-        <ParallaxLayer offset={1.9} style={{display:'flex', flexDirection:'column', backgroundColor:'rgb(33, 161, 121)', height:'fit-content', color:'white'}}>
+        <ParallaxLayer offset={1.9} style={{
+          display:'flex', 
+          flexDirection:'column', 
+          justifyContent:'center', 
+          alignContent:'center'
+        }}>
           <section className="projectSection">
             <h2>PROJECTS</h2>
             <Projects />
