@@ -5,6 +5,7 @@ import Lottie from 'lottie-react';
 import waveSVG from '../assets/svg/101786-wave.json';
 import viteSVG from '../assets/svg/Vitejs-logo.svg';
 import netlifySVG from '../assets/svg/Netlify_logo.svg';
+import myResume from '../assets/pdf/oceanW_resume.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faHtml5, faCss3, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
@@ -40,9 +41,9 @@ export default function HomePage() {
               <li ref={ref} onClick={() => ref.current.scrollTo(2)}>
                 PROJECTS
               </li>
-              <li>RESUME</li>
+              <li ref={ref} onClick={() => ref.current.scrollTo(1)}>RESUME</li>
               <li>ARTWORK</li>
-              <li style={{fontWeight:'200'}}>
+              <li style={{fontWeight:'200'}} ref={ref} onClick={() => ref.current.scrollTo(3)}>
                 CONTACT
               </li>
             </ul>
@@ -83,7 +84,7 @@ export default function HomePage() {
           <Lottie className="lottie" animationData={waveSVG} />
         </ParallaxLayer>
 {/* About Me Section */}
-        <ParallaxLayer offset={0.95} speed={0.2}>
+        <ParallaxLayer offset={1} speed={0.2}>
           <section className="aboutMe">
             <div className="aboutIntro">
               <h2>ABOUT ME</h2>
@@ -99,6 +100,9 @@ export default function HomePage() {
                 solutions. Let's connect and discuss how I can contribute to
                 your web development team!
               </p>
+            </div>
+            <div className='aboutResume'>
+              <embed src={myResume} width="100%" height="100%" type='application/pdf'/>
             </div>
           </section>
           <section className="techStack">
@@ -124,7 +128,7 @@ export default function HomePage() {
           </section>
         </ParallaxLayer>
 {/* Projects Section */}
-        <ParallaxLayer offset={2} style={{
+        <ParallaxLayer offset={2.2} style={{
           display:'flex', 
           flexDirection:'column', 
           justifyContent:'center', 
@@ -136,13 +140,13 @@ export default function HomePage() {
           </section>
         </ParallaxLayer>
 {/* Contact Section */}
-        <ParallaxLayer offset={3} speed={1}>
+        <ParallaxLayer offset={3.2} speed={1}>
           <section className="contactSection">
             <h2>LETS WORK</h2>
             <div className='contactText'>
               <form>
                 <input type='name' required/>
-                <input type type='email'/>
+                <input type='email'/>
                 <input type='text'/>
                 <input type='submit'/>
               </form>

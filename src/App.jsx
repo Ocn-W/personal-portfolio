@@ -4,7 +4,7 @@ import WelcomePage from './component/WelcomePage';
 import HomePage from './component/HomePage';
 
 function App() {
-  const [displayHome, showIntro] = useState(true)
+  const [displayHome, showIntro] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
