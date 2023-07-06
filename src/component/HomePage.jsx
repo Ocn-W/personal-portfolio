@@ -144,7 +144,7 @@ export default function HomePage() {
           <section className="contactSection">
             <h2>LETS WORK</h2>
             <div className='formContainer'>
-            <form className='contactForm' netlify>
+            <form name="contactMe" method="POST" className='contactForm' netlify>
               <label htmlFor='name'>Your Name</label>
               <input type='text' id='name' required aria-required='true' />
               
