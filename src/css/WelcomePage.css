@@ -8,9 +8,11 @@
 }
 
 .welcomePage h1 {
-    font-family: monospace;
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
     color: rgb(7, 2, 13);
-    font-size: 150px;
+    font-size: 200px;
     margin: 0 0 30px 30px;
 }
 

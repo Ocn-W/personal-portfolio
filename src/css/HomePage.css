@@ -27,7 +27,8 @@ nav {
 
 .logo {
  color: rgb(7, 2, 13);
- font-size: 34px;
+ font-size: 28px;
+ font-weight: 400;
  width: fit-content;
  margin: 30px 0 0 30px;
  line-height: 100%;
@@ -47,7 +48,7 @@ nav {
     width: fit-content;
     margin: 0 20px;
     font-size: 30px;
-    font-weight: 150;
+    font-weight: 100;
     cursor: pointer;
 }
 
@@ -63,6 +64,7 @@ nav {
     align-items: center;
     text-align: center;
     font-size: 18px;
+    font-weight: 200;
     animation: loadIntro 1.5s ease-in;  
 }
 
@@ -96,6 +98,10 @@ nav {
 .introText {
     height: fit-content;
     cursor: default;
+}
+
+.introText h1 {
+    font-weight: 300;
 }
 
 .profileImg {
@@ -143,8 +149,13 @@ nav {
 
 .aboutIntro {
     text-align: center;
+    font-weight: 200;
     width: 50%;
     margin: 50px;
+}
+
+.aboutIntro h2 {
+    font-weight: 500;
 }
 
 .techStack {
@@ -154,7 +165,7 @@ nav {
 }
 
 .techStack h2 {
-    font-weight: 250;
+    font-weight: 500;
     margin: 20px auto;
 }
 
@@ -192,5 +203,34 @@ nav {
 
 .projectSection h2 {
     font-size: 36px;
-    font-weight: 250;
+    font-weight: 300;
+}
+
+.contactSection {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactSection h2 {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.contactText {
+    border-radius: 25px;
+    background-color: black;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contactText form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
 }

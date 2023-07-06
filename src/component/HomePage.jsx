@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
+import '../css/HomePage.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Lottie from 'lottie-react';
 import waveSVG from '../assets/svg/101786-wave.json';
-import artSVG from '../assets/svg/70021-abstract-painting-loader.json';
-import '../css/HomePage.css';
+import viteSVG from '../assets/svg/Vitejs-logo.svg';
+import netlifySVG from '../assets/svg/Netlify_logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faHtml5, faCss3, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
@@ -16,7 +17,7 @@ export default function HomePage() {
     <div className="homePage">
       <Parallax pages={4} ref={ref}>
 {/* Navigation Section */}
-        <ParallaxLayer sticky={{start: 0, end: 2}} style={{height:'fit-content'}}>
+        <ParallaxLayer sticky={{start: 0, end: 1.5}} style={{height:'fit-content'}}>
           <nav>
             <h1
               ref={ref}
@@ -39,8 +40,11 @@ export default function HomePage() {
               <li ref={ref} onClick={() => ref.current.scrollTo(2)}>
                 PROJECTS
               </li>
+              <li>RESUME</li>
               <li>ARTWORK</li>
-              <li>CONTACT</li>
+              <li style={{fontWeight:'200'}}>
+                CONTACT
+              </li>
             </ul>
           </nav>
         </ParallaxLayer>
@@ -105,22 +109,22 @@ export default function HomePage() {
               <FontAwesomeIcon icon={faCss3} style={{ height: "50px", color: "blue" }}/>
               <FontAwesomeIcon icon={faJsSquare} style={{ height: "50px", color: "gold" }}/>
               <FontAwesomeIcon icon={faReact} style={{ height: "50px", color: "cyan" }}/>
-              <img src="src/assets/svg/Vitejs-logo.svg" style={{ height: "50px" }}/>
-              <img src="src/assets/svg/Netlify_logo.svg" style={{ height: "50px" }}/>
+              <img src={viteSVG} style={{ height: "50px" }}/>
+              <img src={netlifySVG} style={{ height: "50px" }}/>
             </div>
             <div className="stackLogos" aria-hidden="true">
               <FontAwesomeIcon icon={faHtml5} style={{ height: "50px", color: "orangered" }}/>
               <FontAwesomeIcon icon={faCss3} style={{ height: "50px", color: "blue" }}/>
               <FontAwesomeIcon icon={faJsSquare} style={{ height: "50px", color: "gold" }}/>
               <FontAwesomeIcon icon={faReact} style={{ height: "50px", color: "cyan" }}/>
-              <img src="src/assets/svg/Vitejs-logo.svg" style={{ height: "50px" }}/>
-              <img src="src/assets/svg/Netlify_logo.svg" style={{ height: "50px" }}/>
+              <img src={viteSVG} style={{ height: "50px" }}/>
+              <img src={netlifySVG} style={{ height: "50px" }}/>
             </div>
             </div>
           </section>
         </ParallaxLayer>
 {/* Projects Section */}
-        <ParallaxLayer offset={1.9} style={{
+        <ParallaxLayer offset={2} style={{
           display:'flex', 
           flexDirection:'column', 
           justifyContent:'center', 
@@ -131,36 +135,17 @@ export default function HomePage() {
             <Projects />
           </section>
         </ParallaxLayer>
-{/* Hobbies Section */}
-        <ParallaxLayer offset={3.65} speed={1}>
-          <section className="hobbySection">
-            <div className="aboutHobbies">
-              <h3>MY HOBBIES</h3>
-              <div>
-                <p>
-                  painting, museums, galleries, anything art related I'm all for
-                  it!
-                </p>
-                <Lottie animationData={artSVG} style={{height:'100px'}}/>
-              </div>
-              <div>
-                <p>
-                  nature, a huge outdoor person in general! skateboarding,
-                  surfing, snowboarding, hiking you name it!
-                </p>
-              </div>
-              <div>
-                <p>
-                  movies! i am a huge fan of horror movies and anything
-                  psychological
-                </p>
-              </div>
-              <div>
-                <p>
-                  fashion! coming from six years in the modeling industry i have
-                  a huge respect for the fahsion industry and clothing!
-                </p>
-              </div>
+{/* Contact Section */}
+        <ParallaxLayer offset={3} speed={1}>
+          <section className="contactSection">
+            <h2>LETS WORK</h2>
+            <div className='contactText'>
+              <form>
+                <input type='name' required/>
+                <input type type='email'/>
+                <input type='text'/>
+                <input type='submit'/>
+              </form>
             </div>
           </section>
         </ParallaxLayer>
