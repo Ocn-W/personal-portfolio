@@ -145,14 +145,14 @@ export default function HomePage() {
             <h2>LETS WORK</h2>
             <div className='formContainer'>
             <form name="contactMe" method="POST" className='contactForm' netlify>
-              <label htmlFor='name'>Your Name</label>
-              <input type='text' id='name' required aria-required='true' />
+              <label>Your Name
+              <input type="text" name="name" required aria-required='true' /></label>
               
-              <label htmlFor='email'>Your Email</label>
-              <input type='email' id='email' />
+              <label>Your Email
+              <input type="email" name="email" required aria-required='true'/></label>
               
-              <label htmlFor='message'>Your Message</label>
-              <textarea id='message' rows='4' />
+              <label>Your Message
+              <textarea name='message' rows='4' required aria-required='true'/></label>
               
               <button type='submit'>Submit</button>
             </form>
