@@ -144,11 +144,18 @@ export default function HomePage() {
           <section className="contactSection">
             <h2>LETS WORK</h2>
             <div className='formContainer'>
-            <form name="contactMe" method="POST" className='contactForm' data-netlify='true'>
+            <form 
+              name='contactMe' 
+              method='POST'
+              className='contactForm' 
+              data-netlify='true'
+              onSubmit='submit'
+            >
+              <input type="hidden" name="form-name" value="contactMe" />
               <label>Your Name
               <input type="text" name="name" required aria-required='true' /></label>
               
-              <label>Your Email
+              <label htmlFor='email'>Your Email
               <input type="email" name="email" required aria-required='true'/></label>
               
               <label>Your Message
