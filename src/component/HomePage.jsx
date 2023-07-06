@@ -144,11 +144,11 @@ export default function HomePage() {
           <section className="contactSection">
             <h2>LETS WORK</h2>
             <div className='formContainer'>
-            <form 
+            <form
+              netlify 
               name='contactMe' 
               method='POST'
               className='contactForm' 
-              data-netlify='true'
               onSubmit='submit'
             >
               <input type="hidden" name="form-name" value="contactMe" />
