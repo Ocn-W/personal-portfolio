@@ -143,13 +143,19 @@ export default function HomePage() {
         <ParallaxLayer offset={3.2} speed={1}>
           <section className="contactSection">
             <h2>LETS WORK</h2>
-            <div className='contactText'>
-              <form>
-                <input type='name' required/>
-                <input type='email'/>
-                <input type='text'/>
-                <input type='submit'/>
-              </form>
+            <div className='formContainer'>
+            <form className='contactForm' netlify>
+              <label htmlFor='name'>Your Name</label>
+              <input type='text' id='name' required aria-required='true' />
+              
+              <label htmlFor='email'>Your Email</label>
+              <input type='email' id='email' />
+              
+              <label htmlFor='message'>Your Message</label>
+              <textarea id='message' rows='4' />
+              
+              <button type='submit'>Submit</button>
+            </form>
             </div>
           </section>
         </ParallaxLayer>

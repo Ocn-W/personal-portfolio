@@ -149,7 +149,7 @@ nav {
 
 .aboutIntro {
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
     width: 50%;
     margin: 50px;
 }
@@ -160,8 +160,8 @@ nav {
 
 .aboutResume {
     height: 70vh;
+    width: 50%;
     margin: 50px;
-    border: 1px solid blue;
 }
 
 .techStack {
@@ -225,18 +225,33 @@ nav {
     font-weight: 300;
 }
 
-.contactText {
+.formContainer {
     border-radius: 25px;
+    padding: 25px 50px;
+    max-width: 25%;
+    max-height: 50vh;
     background-color: black;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
-.contactText form {
-    padding: 50px;
+.contactForm {
     display: flex;
+    color: white;
     flex-direction: column;
-    width: 100%;
-    gap: 40px;
+    gap: 10px 0;
     align-items: center;
     justify-content: center;
+}
+
+.contactForm textarea {
+    max-width: 100%;
+    max-height: 15vh;
+}
+
+.contactForm button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-family: 'Poppins';
+    font-size: 20px;
 }
