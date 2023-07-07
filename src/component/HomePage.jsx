@@ -149,7 +149,6 @@ export default function HomePage() {
               name='contactMe'
               method='POST'
               className='contactForm' 
-              onSubmit='submit'
             >
               <input type="hidden" name="form-name" value="contactMe" />
               <label>Your Name
