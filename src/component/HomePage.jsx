@@ -144,14 +144,10 @@ export default function HomePage() {
           <section className="contactSection">
             <h2>LETS WORK</h2>
             <div className='formContainer'>
-            <form
-              netlify 
-              name='contactMe'
-              method='POST'
-              onSubmit='submit'
-              className='contactForm' 
-            >
+            <form netlify name='contactMe' method='POST' onSubmit='submit' className='contactForm'>
+
               <input type='hidden' name='form-name' value='contactMe' />
+
               <label>Name
               <input type='text' name='name' required aria-required='true' /></label>
               
@@ -159,9 +155,10 @@ export default function HomePage() {
               <input id='email' type='email' name='email' required aria-required='true'/></label>
               
               <label>Message
-              <textarea name='message' rows='4' required aria-required='true'/></label>
+              <textarea name='message' rows='4' required aria-required='true'></textarea></label>
               
               <button type='submit'>Submit</button>
+
             </form>
             </div>
           </section>
