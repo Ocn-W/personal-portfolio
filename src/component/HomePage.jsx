@@ -148,16 +148,17 @@ export default function HomePage() {
               netlify 
               name='contactMe'
               method='POST'
+              onSubmit='submit'
               className='contactForm' 
             >
-              <input type="hidden" name="form-name" value="contactMe" />
-              <label>Your Name
-              <input type="text" name="name" required aria-required='true' /></label>
+              <input type='hidden' name='form-name' value='contactMe' />
+              <label>Name
+              <input type='text' name='name' required aria-required='true' /></label>
               
-              <label htmlFor='email'>Your Email
-              <input type="email" name="email" required aria-required='true'/></label>
+              <label htmlFor='email'>Email
+              <input id='email' type='email' name='email' required aria-required='true'/></label>
               
-              <label>Your Message
+              <label>Message
               <textarea name='message' rows='4' required aria-required='true'/></label>
               
               <button type='submit'>Submit</button>
