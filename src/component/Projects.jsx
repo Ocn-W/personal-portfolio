@@ -4,7 +4,7 @@ import { faReact, faHtml5, faCss3, faJsSquare } from '@fortawesome/free-brands-s
 import viteSVG from '../assets/svg/Vitejs-logo.svg';
 import netlifySVG from '../assets/svg/Netlify_logo.svg';
 import '../css/Projects.css';
-import webGenerator from '../assets/WebsiteGenerator.png';
+import webGenerator from '../assets/WebsiteGenerator.jpg';
 import playlistMaker from '../assets/PlaylistMaker.jpg';
 import retailSite from '../assets/RetailSite.jpg';
 import { faArrowLeft, faArrowRight, faCircle } from '@fortawesome/free-solid-svg-icons';
