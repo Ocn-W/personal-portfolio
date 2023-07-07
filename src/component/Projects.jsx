@@ -92,9 +92,9 @@ export default function Projects() {
         className="projectWheel"
         style={{ transform: `translate(-${activeIndex * 100}%)` }}
       >
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           return (
-            <section className="project">
+            <section className="project" key={index}>
               <div className="projectImg">
                 <img src={project.image} />
               </div>
