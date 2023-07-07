@@ -3,10 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <title>Portfolio</title>
   </head>
   <body>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="text/babel">
+      ReactDOM.render (
+        <form
+              netlify 
+              name='contactMe'
+              method='POST'
+              className='contactForm' 
+            >
+              <input type="hidden" name="form-name" value="contactMe" />
+              <label>Your Name
+              <input type="text" name="name" required aria-required='true' /></label>
+              
+              <label htmlFor='email'>Your Email
+              <input type="email" name="email" required aria-required='true'/></label>
+              
+              <label>Your Message
+              <textarea name='message' rows='4' required aria-required='true'/></label>
+              
+              <button type='submit'>Submit</button>
+            </form>,
+            document.getElementById('root')
+      );
+    </script>
   </body>
 </html>
