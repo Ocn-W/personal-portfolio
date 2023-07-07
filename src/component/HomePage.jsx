@@ -147,7 +147,6 @@ export default function HomePage() {
             <form
               netlify 
               name='contactMe'
-              action='' 
               method='POST'
               className='contactForm' 
               onSubmit='submit'
