@@ -14,15 +14,13 @@
     </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script type="text/babel">
-      ReactDOM.render (
+    <script>
         <form
               netlify 
               name='contactMe'
               method='POST'
               className='contactForm' 
             >
-              <input type="hidden" name="form-name" value="contactMe" />
               <label>Your Name
               <input type="text" name="name" required aria-required='true' /></label>
               
@@ -35,7 +33,6 @@
               <button type='submit'>Submit</button>
             </form>,
             document.getElementById('root')
-      );
     </script>
   </body>
 </html>
