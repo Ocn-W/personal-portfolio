@@ -6,32 +6,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
-    </form>
-
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-        <form
-              netlify 
-              name='contactMe'
-              method='POST'
-              onSubmit='submit'
-              className='contactForm' 
-            >
-              <label>Your Name
-              <input type="text" name="name" required aria-required='true' /></label>
-              
-              <label htmlFor='email'>Your Email
-              <input type="email" name="email" required aria-required='true'/></label>
-              
-              <label>Your Message
-              <textarea name='message' rows='4' required aria-required='true'/></label>
-              
-              <button type='submit'>Submit</button>
-            </form>
   </body>
 </html>
