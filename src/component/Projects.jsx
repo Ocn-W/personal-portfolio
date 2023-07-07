@@ -44,17 +44,27 @@ export default function Projects() {
           <p>React-Context</p>
         </>
       ),
-      description: " ",
+      description: (
+        <>
+          <p>
+            This website is a mock-up for an e-commerce website with some
+            front-end features combined with{" "}
+            <em>state management handled by React-Context</em>. Features include
+            a randomly generated list of clothing items to select your desired
+            purchase (unique upon each page load), filtering clothing items on
+            the clothing page by price or rating, adding/removing items from
+            your shopping cart or clearing the cart entirely, and adding items
+            from the clothing page to a favorites page to add to your cart for
+            later view.
+          </p>
+        </>
+      ),
       demoUrl: "https://fashionxpress.netlify.app",
       image: retailSite,
     },
     {
       name: "Spotify Playlist Maker",
-      techstack: (
-        <>
-          {reactLogo}
-        </>
-      ),
+      techstack: <>{reactLogo}</>,
       dependencies: (
         <>
           {netlifyLogo}
@@ -62,7 +72,33 @@ export default function Projects() {
           <p>Spotify API</p>
         </>
       ),
-      description: " ",
+      description: (
+        <>
+          <p>
+            This web application makes use of the SpotifyAPI to search your
+            favorite songs and create custom playlists to upload directly to
+            Spotify. The major features for this website include searching the
+            Spotify database to find your favorite songs and creating/editing
+            custom playlist to publish to your Spotify account. This project
+            served as my way to dive into understanding core concepts around{" "}
+            <em>React Context</em>,{" "}
+            <em>handling token requests and API data</em>,{" "}
+            <em>
+              hiding important API keys for production with dotenv and through
+              Netlify
+            </em>
+            , <em>repository history management on GitHub with GitBash</em>, as
+            well as the overall workflow for SPA's in React without using major
+            libraries.{" "}
+            <strong>
+              <em>
+                You do not need to authorize your account to create the
+                playlist, only to upload!
+              </em>
+            </strong>
+          </p>
+        </>
+      ),
       demoUrl: "https://soundstack.netlify.app",
       image: playlistMaker,
     },
@@ -75,12 +111,23 @@ export default function Projects() {
           {jsLogo}
         </>
       ),
-      dependencies: (
+      dependencies: <>{netlifyLogo}</>,
+      description: (
         <>
-          {netlifyLogo}
+          <p>
+            This website is powered by HTML, CSS, JavaScript and{" "}
+            <em>deployed with Netlify</em>. This tool immerses users in a
+            recreation of the Windows XP operating system, complete with a
+            pseudo Microsoft Paint allowing users to create digital artworks and
+            save them locally, a pseudo Internet Explorer that serves as a
+            random website generator allowing users to visit over 100 websites
+            from all corners of the internet, and a live messaging system to
+            chat with other visitors who have visited, this project transports
+            users back in time in a trip down memory lane to relive the charm of
+            the past through a modern lens.
+          </p>
         </>
       ),
-      description: "",
       demoUrl: "https://thedesktop.netlify.app",
       image: webGenerator,
     },
@@ -95,19 +142,21 @@ export default function Projects() {
         {projects.map((project, index) => {
           return (
             <section className="project" key={index}>
-              <div className="projectImg">
+              <div className='projectImg'>
                 <img src={project.image} />
               </div>
-              <div className="projectInfo">
+              <div className='projectInfo'>
                 <h3>{project.name}</h3>
                 <div className='projectStacks'>
                   {project.techstack}
                 </div>
-                <div className="projectDeps">
+                <div className='projectDeps'>
                   {project.dependencies}
                 </div>
-                <p>{project.description}</p>
-                <a href={project.demoUrl}>Live Demo</a>
+                <div className='projectDesc'>
+                  {project.description}
+                </div>
+                <a target='_blank' href={project.demoUrl}>Live Demo</a>
               </div>
             </section>
           );
@@ -132,14 +181,13 @@ export default function Projects() {
                 className="indicator-btns"
                 onClick={() => {
                   updateIndex(index);
-                }}
-              >
-                <span
-                  className={`${index === activeIndex
+                }}>
+                <span className={
+                  `${index === activeIndex
                       ? "indicator-symbol-active"
                       : "indicator-symbol"
-                    }`}
-                >
+                    }`
+                  }>
                   <FontAwesomeIcon icon={faCircle} />
                 </span>
               </button>

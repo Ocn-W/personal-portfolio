@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       showIntro(false);
-    }, 1999) 
+    }, 1500) 
   },[])
 
   return (

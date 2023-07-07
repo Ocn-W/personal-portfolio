@@ -3,6 +3,7 @@ import '../css/HomePage.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Lottie from 'lottie-react';
 import waveSVG from '../assets/svg/101786-wave.json';
+import emailSVG from '../assets/svg/95247-email.json';
 import viteSVG from '../assets/svg/Vitejs-logo.svg';
 import netlifySVG from '../assets/svg/Netlify_logo.svg';
 import myResume from '../assets/pdf/oceanW_resume.pdf';
@@ -20,20 +21,9 @@ export default function HomePage() {
 {/* Navigation Section */}
         <ParallaxLayer sticky={{start: 0, end: 1.5}} style={{height:'fit-content'}}>
           <nav>
-            <h1
-              ref={ref}
-              onClick={() => ref.current.scrollTo(0)}
-              className="logo"
-            >
+            <h1 className="logo" ref={ref} onClick={() => ref.current.scrollTo(0)}>
               OCEAN
-              <span
-                style={{
-                  color: "rgb(217, 4, 41)",
-                  fontFamily: "Helvetica",
-                  fontSize: "65px",
-                  margin: "0",
-                }}
-              >
+              <span style={{color: "rgb(217, 4, 41)",fontFamily: "Helvetica",fontSize: "65px",margin: "0"}}>
                 .
               </span>
             </h1>
@@ -41,8 +31,9 @@ export default function HomePage() {
               <li ref={ref} onClick={() => ref.current.scrollTo(2)}>
                 PROJECTS
               </li>
-              <li ref={ref} onClick={() => ref.current.scrollTo(1)}>RESUME</li>
-              <li>ARTWORK</li>
+              <li ref={ref} onClick={() => ref.current.scrollTo(1)}>
+                RESUME
+              </li>
               <li style={{fontWeight:'200'}} ref={ref} onClick={() => ref.current.scrollTo(3)}>
                 CONTACT
               </li>
@@ -80,8 +71,8 @@ export default function HomePage() {
           </section>
         </ParallaxLayer>
 {/* SVG Transition Section */}
-        <ParallaxLayer speed={2} offset={0.75}>
-          <Lottie className="lottie" animationData={waveSVG} />
+        <ParallaxLayer offset={0.75} speed={2}>
+          <Lottie className="lottieWave" animationData={waveSVG} />
         </ParallaxLayer>
 {/* About Me Section */}
         <ParallaxLayer offset={1} speed={0.2}>
@@ -128,19 +119,15 @@ export default function HomePage() {
           </section>
         </ParallaxLayer>
 {/* Projects Section */}
-        <ParallaxLayer offset={2.2} style={{
-          display:'flex', 
-          flexDirection:'column', 
-          justifyContent:'center', 
-          alignContent:'center'
-        }}>
+        <ParallaxLayer offset={2} speed={0.5}>
           <section className="projectSection">
             <h2>PROJECTS</h2>
             <Projects />
           </section>
         </ParallaxLayer>
 {/* Contact Section */}
-        <ParallaxLayer offset={3.2} speed={1}>
+        <ParallaxLayer offset={3} speed={0.2}>
+          <Lottie className='lottieEmail' animationData={emailSVG} />
           <section className="contactSection">
             <h2>LETS WORK</h2>
             <div className='formContainer'>

@@ -57,6 +57,10 @@ nav {
     text-decoration: underline;
 }
 
+.navOptions li:active {
+    color: rgb(23, 100, 76);
+}
+
 .introSection {
     display: flex;
     height: 100%;
@@ -79,7 +83,7 @@ nav {
 }
 
 /* LottieFiles WaveSVG Animation */
-.lottie {
+.lottieWave {
     animation: loadSVG 1s ease-in;  
 }
 
@@ -93,6 +97,14 @@ nav {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.lottieEmail {
+    position: absolute;
+    transform: scale(1.2);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
 .introText {
