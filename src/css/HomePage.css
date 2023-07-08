@@ -333,12 +333,14 @@ label {
     }
 
     .aboutIntro {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 0;
+        width: 90%;
     }
 
     .aboutResume {
         height: 35vh;
+        width: auto;
     }
 
     .aboutResume a {
