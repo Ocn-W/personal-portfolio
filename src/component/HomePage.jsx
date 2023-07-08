@@ -109,7 +109,7 @@ export default function HomePage() {
                 Hello! I am a junior front end React web developer based in NYC.
                 Currently building a strong and growing skill set in HTML, CSS,
                 JavaScript, Typescript, React, and TDD using the Mocha framework
-                in Node or Jest. I consistantly improve a keen eye for design
+                in Node or Jest. I consistently improve a keen eye for design
                 and a commitment to producing logical, accessible, and
                 responsive code. I am dedicated to continuous learning and
                 staying up-to-date with the latest trends and best coding
