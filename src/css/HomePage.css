@@ -339,7 +339,7 @@ label {
     }
 
     .aboutResume {
-        height: 35vh;
+        height: auto;
         width: auto;
     }
 
