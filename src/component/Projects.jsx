@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faHtml5, faCss3, faJsSquare } from '@fortawesome/free-brands-svg-icons';
-import viteSVG from '../assets/svg/Vitejs-logo.svg';
-import netlifySVG from '../assets/svg/Netlify_logo.svg';
+import viteSVG from '../assets/svg/viteLogo.svg';
+import netlifySVG from '../assets/svg/netlifyLogo.svg';
 import '../css/Projects.css';
 import webGenerator from '../assets/WebsiteGenerator.jpg';
 import playlistMaker from '../assets/PlaylistMaker.jpg';
@@ -36,6 +36,7 @@ export default function Projects() {
         <>
           {viteLogo}
           {reactLogo}
+          {jsLogo}
         </>
       ),
       dependencies: (
@@ -64,7 +65,12 @@ export default function Projects() {
     },
     {
       name: "Spotify Playlist Maker",
-      techstack: <>{reactLogo}</>,
+      techstack: (
+        <>
+        {reactLogo}
+        {jsLogo}
+        </>
+      ),
       dependencies: (
         <>
           {netlifyLogo}
@@ -134,7 +140,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="projectWheelContainer">
+    <div className="projectWheelContainer" onTouchMove={updateIndex}>
       <div
         className="projectWheel"
         style={{ transform: `translate(-${activeIndex * 100}%)` }}
