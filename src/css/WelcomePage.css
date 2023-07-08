@@ -37,8 +37,11 @@
 }
 
 @media (width <=768px) {
+  .welcomePage {
+    align-items: center;
+  }
+
   .welcomePage h1 {
     font-size: 100px;
-    margin-bottom: 50px;
   }
 }

@@ -93,7 +93,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className='aboutResume'>
-              <embed src={myResume} width="100%" height="100%" type='application/pdf'/>
+              <object data={myResume} width="100%" height="100%" type='application/pdf'/>
             </div>
           </section>
           <section className="techStack">
