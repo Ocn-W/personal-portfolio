@@ -28,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 600px; 
+    width: 600px;
     height: 90%;
     color: black;
 }
@@ -56,6 +56,14 @@
     justify-content: center;
     gap: 20px;
     font-size: 50px;
+}
+
+.netlifyLogo {
+    height: 25px;
+}
+
+.viteLogo {
+    height: 50px;
 }
 
 .projectDeps {
@@ -109,4 +117,52 @@
 
 .indicator-symbol-active {
     color: grey;
+}
+
+@media (width <=768px) {
+    .project {
+        flex-direction: column;
+        border: none;
+    }
+
+    .projectImg img {
+        height: 250px;
+    }
+
+    .projectStacks {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .projectInfo {
+        max-width: 20%;
+        max-height: 100%;
+    }
+
+    .projectInfo h3 {
+        font-size: 18px;
+    }
+
+    .projectDeps {
+        font-size: 14px;
+        height: 25px;
+    }
+
+    .netlifyLogo {
+        height: 15px;
+    }
+
+    .viteLogo {
+        height: 25px;
+    }
+
+    .wheel-btns {
+        margin-top: 10%;
+        gap: 10px;
+    }
+
+    .projectDesc {
+        width: 100%;
+        font-size: 10px;
+    }
 }

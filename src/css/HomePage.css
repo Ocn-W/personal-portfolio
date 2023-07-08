@@ -1,17 +1,17 @@
 .homePage {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 nav {
-  border-bottom: 1px solid rgb(7, 2, 13);
-  z-index: 3;
-  background-color: white;
-  max-height: 20vh;
-  width: 100%;
-  animation: loadNav .5s ease-in;  
+    border-bottom: 1px solid rgb(7, 2, 13);
+    z-index: 3;
+    background-color: white;
+    max-height: 20vh;
+    width: 100%;
+    animation: loadNav .5s ease-in;
 }
 
 @keyframes loadNav {
@@ -19,6 +19,7 @@ nav {
         transform: translateY(-100%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -26,13 +27,13 @@ nav {
 }
 
 .logo {
- color: rgb(7, 2, 13);
- font-size: 28px;
- font-weight: 400;
- width: fit-content;
- margin: 30px 0 0 30px;
- line-height: 100%;
- cursor: pointer;
+    color: rgb(7, 2, 13);
+    font-size: 28px;
+    font-weight: 400;
+    width: fit-content;
+    margin: 30px 0 0 30px;
+    line-height: 100%;
+    cursor: pointer;
 }
 
 .navOptions {
@@ -69,7 +70,7 @@ nav {
     text-align: center;
     font-size: 18px;
     font-weight: 200;
-    animation: loadIntro 1.5s ease-in;  
+    animation: loadIntro 1.5s ease-in;
 }
 
 @keyframes loadIntro {
@@ -84,7 +85,7 @@ nav {
 
 /* LottieFiles WaveSVG Animation */
 .lottieWave {
-    animation: loadSVG 1s ease-in;  
+    animation: loadSVG 1s ease-in;
 }
 
 @keyframes loadSVG {
@@ -182,6 +183,17 @@ nav {
     border-bottom: 1px solid black;
 }
 
+.htmlLogo,
+.cssLogo,
+.jsLogo,
+.reactLogo {
+    height: 50px;
+}
+
+.stackLogos img {
+    height: 50px;
+}
+
 .techStack h2 {
     font-weight: 500;
     margin: 20px auto;
@@ -194,7 +206,7 @@ nav {
     overflow: hidden;
     user-select: none;
     margin: 40px auto;
-    gap: var(--gap);  
+    gap: var(--gap);
 }
 
 .stackLogos {
@@ -210,6 +222,7 @@ nav {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(calc(-100% - var(--gap)));
     }
@@ -264,7 +277,7 @@ label {
     width: 100%;
 }
 
-.contactForm  textarea {
+.contactForm textarea {
     max-width: 25vw;
     max-height: 15vh;
 }
@@ -275,4 +288,90 @@ label {
     border: none;
     font-family: 'Poppins';
     font-size: 20px;
+}
+
+@media (width <=768px) {
+    .logo {
+        margin: 0 0 10px 10px;
+    }
+
+    .navOptions li {
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    .introText {
+        margin-bottom: 100px;
+    }
+
+    .introText h1 {
+        font-size: 20px;
+    }
+
+    .profileImg {
+        height: 100px;
+        width: 100px;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+
+    .lottieWave {
+        display: flex;
+        align-items: flex-end;
+        height: 50%;
+    }
+
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutIntro {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .aboutResume {
+        height: 35vh;
+    }
+
+    .techStack {
+        font-size: 12px;
+        height: fit-content;
+    }
+
+    .scrollStack {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .techStack h2 {
+        margin: 10px;
+    }
+
+    .htmlLogo,
+    .cssLogo,
+    .jsLogo,
+    .reactLogo {
+        height: 25px;
+    }
+
+    .stackLogos img {
+        height: 25px;
+    }
+
+    .lottieEmail {
+        transform: scale(1);
+        margin-top: 40%;
+    }
+
+    .formContainer {
+        max-width: 50%;
+    }
+
+    .formContainer textarea {
+        max-width: 50vw;
+        max-height: 15vh;
+    }
 }

@@ -17,8 +17,8 @@ export default function Projects() {
   const htmlLogo = <FontAwesomeIcon icon={faHtml5}  style={{color:'orangered'}}/>
   const cssLogo = <FontAwesomeIcon icon={faCss3}  style={{color:'blue'}}/>
   const jsLogo = <FontAwesomeIcon icon={faJsSquare}  style={{color:'gold'}}/>  
-  const netlifyLogo = <img src={netlifySVG} alt="Netlify Logo" style={{height:'25px'}}/>;
-  const viteLogo = <img src={viteSVG} alt="Vite Logo" style={{height:'50px'}}/>;
+  const netlifyLogo = <img src={netlifySVG} className='netlifyLogo' alt="Netlify Logo"/>;
+  const viteLogo = <img src={viteSVG} className='viteLogo' alt="Vite Logo"/>;
 
   function updateIndex(newIndex) {
     newIndex < 0

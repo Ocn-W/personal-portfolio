@@ -17,7 +17,7 @@ export default function HomePage() {
 
   return (
     <div className="homePage">
-      <Parallax pages={4} ref={ref}>
+      <Parallax pages={4} ref={ref} >
 {/* Navigation Section */}
         <ParallaxLayer sticky={{start: 0, end: 1.5}} style={{height:'fit-content'}}>
           <nav>
@@ -28,7 +28,7 @@ export default function HomePage() {
               </span>
             </h1>
             <ul className="navOptions">
-              <li ref={ref} onClick={() => ref.current.scrollTo(2)}>
+              <li ref={ref} onClick={() => window.innerWidth < 768 ? ref.current.scrollTo(2.5) : ref.current.scrollTo(2.25)}>
                 PROJECTS
               </li>
               <li ref={ref} onClick={() => ref.current.scrollTo(1)}>
@@ -41,7 +41,7 @@ export default function HomePage() {
           </nav>
         </ParallaxLayer>
 {/* Introduction Section */}
-        <ParallaxLayer speed={1}>
+        <ParallaxLayer>
           <section className="introSection">
             <div style={{ display: "flex" }}>
               <div className="introText">
@@ -71,11 +71,11 @@ export default function HomePage() {
           </section>
         </ParallaxLayer>
 {/* SVG Transition Section */}
-        <ParallaxLayer offset={0.75} speed={2}>
+        <ParallaxLayer offset={0.75} speed={1}>
           <Lottie className="lottieWave" animationData={waveSVG} />
         </ParallaxLayer>
 {/* About Me Section */}
-        <ParallaxLayer offset={1} speed={0.2}>
+        <ParallaxLayer offset={1}>
           <section className="aboutMe">
             <div className="aboutIntro">
               <h2>ABOUT ME</h2>
@@ -100,33 +100,33 @@ export default function HomePage() {
             <h2>MY TECHSTACK</h2>
             <div className='scrollStack'>
             <div className="stackLogos">
-              <FontAwesomeIcon icon={faHtml5} style={{ height: "50px", color: "orangered" }}/>
-              <FontAwesomeIcon icon={faCss3} style={{ height: "50px", color: "blue" }}/>
-              <FontAwesomeIcon icon={faJsSquare} style={{ height: "50px", color: "gold" }}/>
-              <FontAwesomeIcon icon={faReact} style={{ height: "50px", color: "cyan" }}/>
-              <img src={viteSVG} style={{ height: "50px" }}/>
-              <img src={netlifySVG} style={{ height: "50px" }}/>
+              <FontAwesomeIcon className='htmlLogo' icon={faHtml5} style={{ color: "orangered" }}/>
+              <FontAwesomeIcon className='cssLogo' icon={faCss3} style={{ color: "blue" }}/>
+              <FontAwesomeIcon className='jsLogo' icon={faJsSquare} style={{ color: "gold" }}/>
+              <FontAwesomeIcon className='reactLogo' icon={faReact} style={{ color: "cyan" }}/>
+              <img src={viteSVG}/>
+              <img src={netlifySVG}/>
             </div>
             <div className="stackLogos" aria-hidden="true">
-              <FontAwesomeIcon icon={faHtml5} style={{ height: "50px", color: "orangered" }}/>
-              <FontAwesomeIcon icon={faCss3} style={{ height: "50px", color: "blue" }}/>
-              <FontAwesomeIcon icon={faJsSquare} style={{ height: "50px", color: "gold" }}/>
-              <FontAwesomeIcon icon={faReact} style={{ height: "50px", color: "cyan" }}/>
-              <img src={viteSVG} style={{ height: "50px" }}/>
-              <img src={netlifySVG} style={{ height: "50px" }}/>
+              <FontAwesomeIcon className='htmlLogo' icon={faHtml5} style={{ color: "orangered" }}/>
+              <FontAwesomeIcon className='cssLogo' icon={faCss3} style={{ color: "blue" }}/>
+              <FontAwesomeIcon className='jsLogo' icon={faJsSquare} style={{ color: "gold" }}/>
+              <FontAwesomeIcon className='reactLogo' icon={faReact} style={{ color: "cyan" }}/>
+              <img src={viteSVG}/>
+              <img src={netlifySVG}/>
             </div>
             </div>
           </section>
         </ParallaxLayer>
 {/* Projects Section */}
-        <ParallaxLayer offset={2} speed={0.5}>
+        <ParallaxLayer offset={window.innerWidth < 768 ? 2.5 : 2.25}>
           <section className="projectSection">
             <h2>PROJECTS</h2>
             <Projects />
           </section>
         </ParallaxLayer>
 {/* Contact Section */}
-        <ParallaxLayer offset={3} speed={0.2}>
+        <ParallaxLayer offset={3} speed={window.innerWidth < 768 ? 2 : 1} style={{backgroundColor:'white'}}>
           <Lottie className='lottieEmail' animationData={emailSVG} />
           <section className="contactSection">
             <h2>LETS WORK</h2>
