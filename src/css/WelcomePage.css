@@ -39,5 +39,6 @@
 @media (width <=768px) {
   .welcomePage h1 {
     font-size: 100px;
+    margin-bottom: 50px;
   }
 }
