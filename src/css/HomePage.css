@@ -175,6 +175,11 @@ nav {
     height: 70vh;
     width: 50%;
     margin: 50px;
+    text-align: center;
+}
+
+.aboutResume a {
+    display: none;
 }
 
 .techStack {
@@ -334,6 +339,12 @@ label {
 
     .aboutResume {
         height: 35vh;
+    }
+
+    .aboutResume a {
+        text-decoration: none;
+        padding: 5px;
+        display: block;
     }
 
     .techStack {

@@ -94,6 +94,7 @@ export default function HomePage() {
             </div>
             <div className='aboutResume'>
               <object data={myResume} width="100%" height="100%" type='application/pdf'/>
+              <a className='dwnlBtn' href={myResume}>Download</a>
             </div>
           </section>
           <section className="techStack">
