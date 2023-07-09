@@ -40,9 +40,9 @@
     animation: darkMode .2s linear forwards;
 }
 .darkCircle {
+    border-radius: 50%;
     color: var(--darkCircle_color);
     box-shadow: 0px 0px 10px white;
-    
 }
 
 @keyframes darkMode {
