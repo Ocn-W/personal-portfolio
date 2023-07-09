@@ -5,8 +5,15 @@
     --darkCircle_color: rgb(244, 244, 244);
 }
 
+* {
+    transition: all 0.2s linear ease;
+}
+
 .themeToggle {
     position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     text-align: left;
     z-index: 99;
     right: 2%;
@@ -30,28 +37,29 @@
 
 .darkContainer {
     background: var(--darkBtn_background);
+    animation: darkMode .2s linear forwards;
 }
 .darkCircle {
     color: var(--darkCircle_color);
     box-shadow: 0px 0px 10px white;
-    animation: darkMode .2s linear forwards;
+    
 }
 
 @keyframes darkMode {
     0% {
-        transform: translateX(0);
+        justify-content: flex-start;
     }
     100% {
-        transform: translateX(300%);
+        justify-content: flex-end;
     }
 }
 
 @keyframes lightMode {
     0% {
-        transform: translateX(300%);
+        justify-content: flex-end;
     }
     100% {
-        transform: translateX(0);
+        justify-content: flex-start;
     }
 }
 
