@@ -1,0 +1,62 @@
+:root {
+    --lightBtn_background: linear-gradient(rgb(0, 238, 255),rgb(0, 119, 255));
+    --lightCircle_color: rgb(238, 255, 0);
+    --darkBtn_background: linear-gradient(rgb(131, 0, 213),rgb(27, 0, 75));
+    --darkCircle_color: rgb(244, 244, 244);
+}
+
+.themeToggle {
+    position: absolute;
+    text-align: left;
+    z-index: 99;
+    right: 2%;
+    bottom: 2%;
+    width: 5%;
+    height: 5%;
+    padding: 3px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 8px inset rgba(0,0,0,0.8);
+    border-radius: 25px;
+    cursor: pointer;
+    background: var(--lightBtn_background);    
+}
+
+.toggleCircle {
+    border-radius: 50%;
+    color: var(--lightCircle_color);
+    box-shadow: 0px 0px 10px gold;
+    animation: lightMode .2s linear forwards;
+}
+
+.darkContainer {
+    background: var(--darkBtn_background);
+}
+.darkCircle {
+    color: var(--darkCircle_color);
+    box-shadow: 0px 0px 10px white;
+    animation: darkMode .2s linear forwards;
+}
+
+@keyframes darkMode {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(300%);
+    }
+}
+
+@keyframes lightMode {
+    0% {
+        transform: translateX(300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (width<=768px) {
+    .themeToggle {
+        width: 20%;
+    }
+}

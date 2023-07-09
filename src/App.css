@@ -1,3 +1,22 @@
 body {
   margin: 0;
+  background-color: var(--body_background);
+  color: var(--body_color1);
+  --body_background: white;
+  --body_color1: black;
+  --body_color2: white;
+  --border_color1: grey;
+  --border_color2: black;
+}
+
+.darkMode {
+  --body_background: rgb(38, 38, 38);
+  --body_color1: white;
+  --body_color2: black;
+  --border_color1: white;
+  --border_color2: grey;
+}
+
+* {
+  transition: all 0.1s ease;
 }

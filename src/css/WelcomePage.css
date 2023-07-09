@@ -1,7 +1,7 @@
 .welcomePage {
   height: 100vh;
   width: auto;
-  background: rgb(251, 250, 248);
+  background: var(--body_background);
   display: flex;
   align-items: flex-end;
   animation: introAnim 2s ease-out;
@@ -11,7 +11,7 @@
   font-family: 'Poppins';
   font-style: italic;
   font-weight: 400;
-  color: rgb(7, 2, 13);
+  color: var(--body_color1);
   font-size: 200px;
   margin: 0 0 30px 30px;
 }

@@ -6,9 +6,9 @@
 }
 
 nav {
-    border-bottom: 1px solid rgb(7, 2, 13);
+    border-bottom: 1px solid var(--border_color2);
     z-index: 3;
-    background-color: white;
+    background-color: var(--body_background);
     max-height: 20vh;
     width: 100%;
     animation: loadNav .5s ease-in;
@@ -27,8 +27,8 @@ nav {
 }
 
 .logo {
-    color: rgb(7, 2, 13);
-    font-size: 28px;
+    color: var(--body_color);
+    font-size: 36px;
     font-weight: 400;
     width: fit-content;
     margin: 30px 0 0 30px;
@@ -184,8 +184,8 @@ nav {
 
 .techStack {
     text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid var(--border_color2);
+    border-bottom: 1px solid var(--border_color2);
 }
 
 .htmlLogo,

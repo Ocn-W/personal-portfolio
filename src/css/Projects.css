@@ -17,7 +17,7 @@
     display: inline-flex;
     justify-content: center;
     width: 100%;
-    border-bottom: 1px dotted grey;
+    border-bottom: 1px dotted var(--border_color1);
     align-items: center;
     height: 490px;
 }
@@ -30,7 +30,7 @@
     justify-content: space-evenly;
     width: 600px;
     height: 90%;
-    color: black;
+    color: var(--body_color1);
 }
 
 .projectInfo a {

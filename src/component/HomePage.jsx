@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <div className="homePage">
       <Parallax pages={4} ref={ref}>
-        {/* Navigation Section */}
+{/* Navigation Section */}
         <ParallaxLayer
           sticky={{ start: 0, end: 1.5 }}
           style={{ height: "fit-content" }}
@@ -66,7 +66,7 @@ export default function HomePage() {
             </ul>
           </nav>
         </ParallaxLayer>
-        {/* Introduction Section */}
+{/* Introduction Section */}
         <ParallaxLayer>
           <section className="introSection">
             <div style={{ display: "flex" }}>
@@ -96,11 +96,11 @@ export default function HomePage() {
             </div>
           </section>
         </ParallaxLayer>
-        {/* SVG Transition Section */}
+{/* SVG Transition Section */}
         <ParallaxLayer offset={0.75} speed={1}>
           <Lottie className="lottieWave" animationData={waveSVG} />
         </ParallaxLayer>
-        {/* About Me Section */}
+{/* About Me Section */}
         <ParallaxLayer offset={1}>
           <section className="aboutMe">
             <div className="aboutIntro">
@@ -184,18 +184,18 @@ export default function HomePage() {
             </div>
           </section>
         </ParallaxLayer>
-        {/* Projects Section */}
+{/* Projects Section */}
         <ParallaxLayer offset={window.innerWidth < 768 ? 2.5 : 2.25}>
           <section className="projectSection">
             <h2>PROJECTS</h2>
             <Projects />
           </section>
         </ParallaxLayer>
-        {/* Contact Section */}
+{/* Contact Section */}
         <ParallaxLayer
           offset={3}
           speed={window.innerWidth < 768 ? 2 : 1}
-          style={{ backgroundColor: "white" }}
+          style={{ backgroundColor: "var(--body_background)" }}
         >
           <Lottie className="lottieEmail" animationData={emailSVG} />
           <section className="contactSection">
