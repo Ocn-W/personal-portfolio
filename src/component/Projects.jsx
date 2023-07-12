@@ -7,6 +7,7 @@ import '../css/Projects.css';
 import webGenerator from '../assets/WebsiteGenerator.jpg';
 import playlistMaker from '../assets/PlaylistMaker.jpg';
 import retailSite from '../assets/RetailSite.jpg';
+import qrGenSite from '../assets/QRGeneratorSite.jpg';
 import { faArrowLeft, faArrowRight, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -30,6 +31,36 @@ export default function Projects() {
   }
 
   const projects = [
+    {
+      name: "QR Box",
+      techstack: (
+        <>
+          {viteLogo}
+          {reactLogo}
+          {jsLogo}
+        </>
+      ),
+      dependencies: (
+        <>
+          {netlifyLogo}
+          <p>react-qr-code</p>
+        </>
+      ),
+      description: (
+        <>
+          <p>
+            This website makes use of the library react-qr-code to generate,
+            customize, and download your own QR Codes for websites, business
+            cards, social media, you name it! This project highlights some
+            interesting features possible with the library such as{" "}
+            <em>SVG to PNG conversion for file downloads</em> and{" "}
+            <em>state management to handle the styling of SVG elements</em>.
+          </p>
+        </>
+      ),
+      demoUrl: "https://qrbox.netlify.app/",
+      image: qrGenSite,
+    },
     {
       name: "Retail Website",
       techstack: (
@@ -67,8 +98,8 @@ export default function Projects() {
       name: "Spotify Playlist Maker",
       techstack: (
         <>
-        {reactLogo}
-        {jsLogo}
+          {reactLogo}
+          {jsLogo}
         </>
       ),
       dependencies: (
