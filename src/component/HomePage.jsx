@@ -7,7 +7,7 @@ import emailSVG from '../assets/svg/95247-email.json';
 import viteSVG from '../assets/svg/viteLogo.svg';
 import netlifySVG from '../assets/svg/netlifyLogo.svg';
 import typescriptSVG from '../assets/svg/tsLogo.svg';
-import myResume from '../assets/pdf/oceanW-resume.pdf';
+import myResume from '../assets/pdf/ocean-waring-resume.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faHtml5, faCss3, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
