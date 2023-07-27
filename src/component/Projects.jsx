@@ -4,10 +4,12 @@ import { faReact, faHtml5, faCss3, faJsSquare } from '@fortawesome/free-brands-s
 import viteSVG from '../assets/svg/viteLogo.svg';
 import netlifySVG from '../assets/svg/netlifyLogo.svg';
 import '../css/Projects.css';
+import sassSVG from '../assets/svg/sassLogo.svg';
 import webGenerator from '../assets/WebsiteGenerator.jpg';
 import playlistMaker from '../assets/PlaylistMaker.jpg';
 import retailSite from '../assets/RetailSite.jpg';
 import qrGenSite from '../assets/QRGeneratorSite.jpg';
+import authySite from '../assets/TicketAuthSite.jpg';
 import { faArrowLeft, faArrowRight, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -20,6 +22,7 @@ export default function Projects() {
   const jsLogo = <FontAwesomeIcon icon={faJsSquare}  style={{color:'gold'}}/>  
   const netlifyLogo = <img src={netlifySVG} className='netlifyLogo' alt="Netlify Logo"/>;
   const viteLogo = <img src={viteSVG} className='viteLogo' alt="Vite Logo"/>;
+  const sassLogo = <img src={sassSVG} className='sassLogo' alt='Sass Logo'/>;
 
   function updateIndex(newIndex) {
     newIndex < 0
@@ -32,7 +35,40 @@ export default function Projects() {
 
   const projects = [
     {
-      name: "QR Box",
+      name: "Retail Website",
+      techstack: (
+        <>
+          {viteLogo}
+          {reactLogo}
+          {jsLogo}
+          {sassLogo}
+        </>
+      ),
+      dependencies: (
+        <>
+          {netlifyLogo}
+          <p>Jotai</p>
+          <p>React Router</p>
+        </>
+      ),
+      description: (
+        <>
+          <p>
+            This is a mock e-commerce website using front-end features combined
+            with <em>global state management handled by Jotai</em> and{" "}
+            <em>pagination with React Router</em>. Features include a randomly
+            generated list of clothing items to select your desired purchase,
+            filtering clothing items on the clothing page by price or rating,
+            adding items from your shopping or favorites cart, and a checkout
+            page to view your total and mock form to complete purchases.
+          </p>
+        </>
+      ),
+      demoUrl: "https://voguevalue.netlify.app",
+      image: retailSite,
+    },
+    {
+      name: "QR Code Generator",
       techstack: (
         <>
           {viteLogo}
@@ -60,39 +96,6 @@ export default function Projects() {
       ),
       demoUrl: "https://qrbox.netlify.app/",
       image: qrGenSite,
-    },
-    {
-      name: "Retail Website",
-      techstack: (
-        <>
-          {viteLogo}
-          {reactLogo}
-          {jsLogo}
-        </>
-      ),
-      dependencies: (
-        <>
-          {netlifyLogo}
-          <p>React-Context</p>
-        </>
-      ),
-      description: (
-        <>
-          <p>
-            This website is a mock-up for an e-commerce website with some
-            front-end features combined with{" "}
-            <em>state management handled by React-Context</em>. Features include
-            a randomly generated list of clothing items to select your desired
-            purchase (unique upon each page load), filtering clothing items on
-            the clothing page by price or rating, adding/removing items from
-            your shopping cart or clearing the cart entirely, and adding items
-            from the clothing page to a favorites page to add to your cart for
-            later view.
-          </p>
-        </>
-      ),
-      demoUrl: "https://fashionxpress.netlify.app",
-      image: retailSite,
     },
     {
       name: "Spotify Playlist Maker",
@@ -138,6 +141,35 @@ export default function Projects() {
       ),
       demoUrl: "https://soundstack.netlify.app",
       image: playlistMaker,
+    },
+    {
+      name: "Ticket Authentication Site",
+      techstack: (
+        <>
+          {viteLogo}
+          {reactLogo}
+          {jsLogo}
+          {sassLogo}
+        </>
+      ),
+      dependencies: (
+        <>
+          {netlifyLogo}
+          <p>React Context</p>
+        </>
+      ),
+      description: (
+        <>
+          <p>
+            This website explores mock <em>form validation techniques</em> with
+            features such as being able to generate a randomized custom ticket
+            in similar format to a gift or CC. The form may only be submitted if
+            the proper mock data is supplied to the appropriate fields.
+          </p>
+        </>
+      ),
+      demoUrl: "https://authentix.netlify.app/",
+      image: authySite,
     },
     {
       name: "Random Website Generator",

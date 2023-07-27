@@ -62,7 +62,8 @@
     height: 25px;
 }
 
-.viteLogo {
+.viteLogo,
+.sassLogo {
     height: 50px;
 }
 
@@ -152,10 +153,11 @@
         height: 15px;
     }
 
-    .viteLogo {
+    .viteLogo,
+    .sassLogo {
         height: 25px;
     }
-
+    
     .wheel-btns {
         margin-top: 10%;
         gap: 10px;

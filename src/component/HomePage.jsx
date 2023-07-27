@@ -6,7 +6,7 @@ import waveSVG from '../assets/svg/101786-wave.json';
 import emailSVG from '../assets/svg/95247-email.json';
 import viteSVG from '../assets/svg/viteLogo.svg';
 import netlifySVG from '../assets/svg/netlifyLogo.svg';
-import typescriptSVG from '../assets/svg/tsLogo.svg';
+import sassSVG from '../assets/svg/sassLogo.svg';
 import myResume from '../assets/pdf/ocean-waring-resume.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -147,7 +147,7 @@ export default function HomePage() {
                   icon={faJsSquare}
                   style={{ color: "gold" }}
                 />
-                <img src={typescriptSVG} />
+                <img src={sassSVG} />
                 <FontAwesomeIcon
                   className="reactLogo"
                   icon={faReact}
@@ -172,7 +172,7 @@ export default function HomePage() {
                   icon={faJsSquare}
                   style={{ color: "gold" }}
                 />
-                <img src={typescriptSVG} />
+                <img src={sassSVG} />
                 <FontAwesomeIcon
                   className="reactLogo"
                   icon={faReact}
